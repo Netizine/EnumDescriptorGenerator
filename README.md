@@ -1,9 +1,9 @@
 # Enum to String Source Generator
 
-The source generator generates a```csharp GetDescription ```method for enumerations that have the```csharp [GenerateEnumDescription] ```defined
+The source generator generates a ```GetDescription``` method for enumerations that have the ```[GenerateEnumDescription]```defined
 
 ## Get Started
-Add a reference in your project to the EnumDescriptorGenerator project and then set OutputItemType="Analyzer" and ReferenceOutputAssembly="false" as shown below.
+Add a reference in your project to the EnumDescriptorGenerator project and then set ```OutputItemType="Analyzer"``` and ```ReferenceOutputAssembly="false"``` as shown below.
 ```xml
 <ItemGroup>
   <ProjectReference Include="..\..\src\EnumDescriptorGenerator\EnumDescriptorGenerator.csproj"
@@ -11,9 +11,9 @@ Add a reference in your project to the EnumDescriptorGenerator project and then 
 				  ReferenceOutputAssembly="false"/>
 </ItemGroup>
 ```
-All enums with ```csharp [GenerateEnumDescription] ``` will now be selected to process 
+All enums with ```csharp [GenerateEnumDescription] ``` will now be selected to be processed by the Source Generator
 
-> You can customiza the value using `DescriptionAttribute`
+> You can customize the value using the ```DescriptionAttribute```
 
 ## Example
 
