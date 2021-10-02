@@ -21,6 +21,11 @@ namespace EnumDescriptorGenerator
             ";
         public void Initialize(GeneratorInitializationContext context)
         {
+            // Attach the debugger if required.
+            //if (!Debugger.IsAttached)
+            //{
+            //    Debugger.Launch();
+            //}
             context.RegisterForPostInitialization(ctx => ctx.AddSource("GenerateEnumDescription.g.cs", SourceText.From(AttributeText, Encoding.UTF8)));
             context.RegisterForSyntaxNotifications(() => new EnumSyntaxReceiver());
         }
